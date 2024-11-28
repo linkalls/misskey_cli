@@ -23,6 +23,11 @@ Future<dynamic> imageUrl(String imagePath) async {
           'Content-Type': 'multipart/form-data',
         },
       ),
+      onSendProgress: (int sent, int total) {
+        final progress = (sent / total) * 100;
+        final progressBar = ('#' * (progress ~/ 10)).padRight(10, '-');
+        print('[$progressBar] ${progress.toStringAsFixed(2)}%');
+      },
     );
 
     print(response.data!["id"]);
