@@ -8,6 +8,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  args: ^2.6.0
   dio: ^5.7.0
   # dotenv: ^4.2.0
   enven: ^1.0.1

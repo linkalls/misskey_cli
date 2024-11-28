@@ -8,3 +8,6 @@ pubspec.lock
 .env
 lib/gen/env.g.dart
 lib/misskey_on_cli.exe
+lib/1049-200x300.jpg
+lib/src/1049-200x300.jpg
+lib/file.jpg
