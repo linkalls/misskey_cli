@@ -13,13 +13,13 @@ void main(List<String> arguments) async {
     final server = Env.server;
     final dio = Dio();
     if (arguments.length == 1) {
-      await dio.post("${server}/api/notes/create",
+      await dio.post("$server/api/notes/create",
           data: {
             "text": arguments[0],
           },
           options: Options(headers: {
             //* 全部がdataにかけるわけじゃないので注意
-            "Authorization": "Bearer ${env}",
+            "Authorization": "Bearer $env",
             "Content-Type": "application/json",
           }));
       print("Posted! ${arguments[0]}");
